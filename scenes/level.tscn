@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1dfhhrg8wqpr"]
+
+[ext_resource type="Texture2D" uid="uid://bptjb2dg6kjk" path="res://graphics/ground/dirt.png" id="1_n2xde"]
+[ext_resource type="PackedScene" uid="uid://d3tq7h1mcbgfg" path="res://scenes/player.tscn" id="2_rv15t"]
+[ext_resource type="PackedScene" uid="uid://cykq7cbubwbbn" path="res://scenes/corner_bottom_wall.tscn" id="3_in56a"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(575.5, 327)
+scale = Vector2(3.80195, 2.15584)
+texture = ExtResource("1_n2xde")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_rv15t")]
+position = Vector2(589, 320)
+
+[node name="CornerBottomWall" parent="." instance=ExtResource("3_in56a")]
+position = Vector2(632, 259)
+
+[node name="CornerBottomWall" parent="CornerBottomWall" instance=ExtResource("3_in56a")]
+position = Vector2(68, 34)
+
+[node name="CornerBottomWall2" parent="CornerBottomWall" instance=ExtResource("3_in56a")]
+position = Vector2(136, 68)
+
+[node name="CornerBottomWall" parent="CornerBottomWall/CornerBottomWall2" instance=ExtResource("3_in56a")]
+position = Vector2(68, 34)

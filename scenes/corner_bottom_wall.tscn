@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cykq7cbubwbbn"]
+
+[ext_resource type="Texture2D" uid="uid://wumha14hhe3q" path="res://graphics/walls/cornerbottomwall.png" id="1_fymvt"]
+
+[node name="CornerBottomWall" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-17, -20, -17, 4, -15, 6, -12, 8, -11, 9, -9, 10, -7, 12, -6, 14, -5, 15, -4, 17, -2, 19, 0, 20, 17, 20, 17, -3, 1, -3, -3, -7, -4, -9, -5, -10, -6, -12, -9, -15, -11, -16, -13, -18, -15, -19, -16, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_fymvt")
